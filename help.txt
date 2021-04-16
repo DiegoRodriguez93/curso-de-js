@@ -1,0 +1,18 @@
+del lado del servidor
+node.js
+deno
+
+aplicaciones moviles
+react native // airbnb // facebook // instagram
+ionic
+capacitor.js
+cordova
+
+aplicaciones de escritorio
+electron.js // visual studio code // skype // slack 
+
+librerias del cliente
+React.js
+Vue.js
+Angular 2 versiones
+Jquery (antigua) // aprender 
