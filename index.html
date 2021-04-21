@@ -1,8 +1,79 @@
 <html>
   <head></head>
   <body>
-    <h1>codigo html de muestra</h1>
 
-    <script src="index.js"></script>
+<!--     <h1>codigo html de muestra</h1>
+    <h1 id="segundo">segundo h1</h1>
+
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+       Ab, corrupti voluptatibus provident nemo repellat impedit sit accusantium p
+       ossimus ipsam sunt magnam distinctio repudiandae voluptates officiis labore. 
+       Maxime libero qui esse?
+    </div>
+
+    <input type="text">
+
+    <button onclick="document.querySelector('input').remove(); " class="boton">click me</button>
+ -->
+
+  <h3>Condicionales</h3>
+
+  <label for="edad">Edad</label>
+  <input type="number" id="edad">
+  <span id="error"></span>
+  <button id="botonEntrar">Entrar</button>
+
+
+  <script>
+
+    // crear un evento al momento de entrar
+
+    var botonEntrar = document.getElementById('botonEntrar');
+
+    botonEntrar.addEventListener('click', function(){
+      alert('Bienvenido usted es mayor de edad');
+    });
+
+    botonEntrar.style.display = 'none';
+
+    document.getElementById('edad').addEventListener('keyup', function(){
+
+      var edad = document.getElementById('edad').value; 
+      var spanError = document.getElementById('error');
+
+      // operadores de comparacion
+      // para el igual usar ==
+      // para el mayor usar >
+      // para el menor usar <
+      // para el mayor e igual que usar >=
+      // para el menor o igual que usar <=
+
+      if( edad > 17 ){
+        // correcto
+        botonEntrar.style.display = 'inline';
+        spanError.innerHTML = '';
+
+        if(edad > 100){
+          spanError.innerHTML = 'felicidades'
+        }
+
+      }else{
+        // incorrecto
+        botonEntrar.style.display = 'none';
+        spanError.innerHTML = `<b>Debe ser mayor de edad para
+         ingresar en el sistema</b>`;
+         spanError.style.color = 'red';
+      }
+
+    });
+
+
+  </script>
+
+
+
+<!--     <script src="modificaciones/modificarDiv.js"></script>
+    <script src="modificaciones/modificarBold.js"></script> -->
   </body>
 </html>

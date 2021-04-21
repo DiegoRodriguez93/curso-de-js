@@ -30,11 +30,11 @@
 // TYPESCRIPT
 
 // tipo de datos
-let int = 1000; // entero
+/*let int = 1000; // entero
 let float = 1.4; // flotante
 
 // tipo de dato string o cadena de texto comillas
-let string = "buen dia";
+ let string = "buen dia";
 let string2 = " I'm Diego ";
 let string4 = 'televisor 32" ';
 
@@ -75,6 +75,27 @@ let suma = year + parseInt(unoString);
 // metodo toString()
 let toString = year.toString(); // 2021 devolveria "2021";
 
-alert(suma);
+alert(suma);*/
 
 //alert(variableConcatenada);
+ 
+
+// seleccionar elementos 
+
+document.querySelector('h1'); // por nombre de etiqueta
+document.querySelector('#segundo'); // por nombre de id
+document.getElementById('segundo'); // por nombre de id
+document.querySelector('.boton'); // por nombre de clase
+
+// listener o escuchas
+document.getElementById('segundo').addEventListener('click', function(){
+  // ejecutar el codigo js que queramos aqui
+  alert('test');
+
+ });
+
+ // para agregar en html debo agregar al elemento el nombre del listener con la palabra on
+/* <button onclick="alert('click')">test</button> */
+
+// respetar el orden cronologico al momento de la importacion de archivos.
+
