@@ -1,8 +1,7 @@
 <html>
   <head></head>
   <body>
-
-<!--     <h1>codigo html de muestra</h1>
+    <!--     <h1>codigo html de muestra</h1>
     <h1 id="segundo">segundo h1</h1>
 
     <div>
@@ -17,63 +16,99 @@
     <button onclick="document.querySelector('input').remove(); " class="boton">click me</button>
  -->
 
-  <h3>Condicionales</h3>
+    <h3>Condicionales</h3>
 
-  <label for="edad">Edad</label>
-  <input type="number" id="edad">
-  <span id="error"></span>
-  <button id="botonEntrar">Entrar</button>
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" />
 
+    <label for="">Identificacion</label>
+    <input type="text" id="identificacion">
 
-  <script>
+    <span id="error"></span>
+    <button id="botonEntrar">Entrar</button>
 
-    // crear un evento al momento de entrar
+    <script src="funciones.js"></script>
 
-    var botonEntrar = document.getElementById('botonEntrar');
+    <script>
+      // crear un evento al momento de entrar
 
-    botonEntrar.addEventListener('click', function(){
-      alert('Bienvenido usted es mayor de edad');
-    });
+      var botonEntrar = document.getElementById("botonEntrar");
 
-    botonEntrar.style.display = 'none';
+      botonEntrar.addEventListener("click", function () {
+        alert("Bienvenido usted es mayor de edad");
+      });
 
-    document.getElementById('edad').addEventListener('keyup', function(){
+      botonEntrar.style.display = "none";
 
-      var edad = document.getElementById('edad').value; 
-      var spanError = document.getElementById('error');
+      document.getElementById('identificacion').addEventListener('keyup', function(){
 
-      // operadores de comparacion
-      // para el igual usar ==
-      // para el mayor usar >
-      // para el menor usar <
-      // para el mayor e igual que usar >=
-      // para el menor o igual que usar <=
+        var identificacion = document.getElementById("identificacion").value
 
-      if( edad > 17 ){
-        // correcto
-        botonEntrar.style.display = 'inline';
-        spanError.innerHTML = '';
+        var tieneIdentificacion = false;
 
-        if(edad > 100){
-          spanError.innerHTML = 'felicidades'
+        if(identificacion == 'si'){
+          tieneIdentificacion = true;
         }
 
-      }else{
-        // incorrecto
-        botonEntrar.style.display = 'none';
-        spanError.innerHTML = `<b>Debe ser mayor de edad para
+        if( !tieneIdentificacion ){ // tieneIdentificacion == false o tieneIdentificacion != true
+          alert('no tiene identificacion');
+        }
+
+        
+      })
+
+
+      document.getElementById("edad").addEventListener("keyup", function () {
+        var edad = document.getElementById("edad").value;
+    
+        var spanError = document.getElementById("error");
+
+        // operadores de comparacion
+        // para el igual usar ==
+        // para ser igual del mismo valor y del mismo tipo ===
+        // para que sea diferente a !=
+        // para que sea diferente de diferente valor y tipo a !==
+        // para el mayor usar >
+        // para el menor usar <
+        // para el mayor e igual que usar >=
+        // para el menor o igual que usar <=
+
+        // && AND
+        // || OR
+        // ! en caso de que la condicion no se cumpla, que sea false
+
+        // typeof sirve para detectar el tipo del dato que nos llega
+        // se puede usar typeof y un espacio el dato o typeof()
+
+        // operadores ternarios
+        // condicion (edad == 100)
+        // despues del ? el bloque de codigo a ejecutar si esta condicion es correcta
+        // despues de los : el bloque de codigo a ejecutar si la condicion no es correcta
+
+        // edad == 100 ? alert('Felicidades') : alert('Usted no ha cumplido 100 anos');
+
+
+
+
+        edad >= 18 ? console.log("es mayor") : console.log("es menor");
+
+        if (edad > 17 && edad != 100) {
+          // correcto
+          botonEntrar.style.display = "inline";
+          spanError.innerHTML = "";
+        } else if (edad == 100) {
+          alert("Felicitaciones!");
+        } else {
+          // incorrecto
+          botonEntrar.style.display = "none";
+          spanError.innerHTML = `<b>Debe ser mayor de edad para
          ingresar en el sistema</b>`;
-         spanError.style.color = 'red';
-      }
+          spanError.style.color = "red";
+        }
+      });
+    </script>
 
-    });
-
-
-  </script>
-
-
-
-<!--     <script src="modificaciones/modificarDiv.js"></script>
+    <!--     <script src="modificaciones/modificarDiv.js"></script>
     <script src="modificaciones/modificarBold.js"></script> -->
   </body>
 </html>
