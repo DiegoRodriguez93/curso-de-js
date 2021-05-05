@@ -50,17 +50,22 @@ function banarme(seBano){
 }
 
 function ejecutarRutina(){
-
     lavarseLosDientes(true); 
     desayunar('Cereales');
     banarme(false);
-
-
 }
 
+const ejecutarRutina = () => {
+    lavarseLosDientes(true); 
+    desayunar('Cereales');
+    banarme(false);
+} 
 
+var nombre;
+console.log(nombre) // undefined
+nombre = 'nombre mutado o nombre cambiado';
+console.log(nombre) // 'nombre mutado o nombre cambiado'
 
-
-
-
+const valorDefinitivo = "valor";
+const valorDefinitivo; // no se puede
 
