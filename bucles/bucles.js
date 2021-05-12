@@ -12,7 +12,7 @@ for (let i = 0; i <= 10; i = i + 1) {
   todosLosNumeros += i; //`${i}, `;
 }
 
-console.log(todosLosNumeros);
+/* console.log(todosLosNumeros); */
 
 // UTILIZANDO FOR PARA ARREGLOS DE DATOS
 
@@ -28,13 +28,74 @@ const dias = [
   "Domingo"/* indice 6 */,
 ];
 
-let largoDelArray = dias.length // 7
-
-for(let indice = 0; indice < largoDelArray; indice++ ){
+ let largoDelArray = dias.length // 7
+/* 
+ for(let indice = 0; indice < largoDelArray; indice++ ){
 
     console.log(dias[indice])
 
-}
+}   */
+
+// foreach
+
+const alumnos = [
+  ['Jorge', 'JS1', 'Montevideo', 7], // indice o index 0
+  ['Julian', 'JS1', 'Salto', 8], // index 1
+  ['Ana', 'JS2', 'Canelones', 9], // index 2
+  ['Pedro', 'JS2', 'Maldonado', 4] // index 3
+];
+
+// como crear un alumno mas
+alumnos.push(['Luis', 25, 'San Jose', 10]);
+
+
+// La funcion dentro del foreach va a recibir 3 argumentos
+// el primer parametro es el elemento individual dentro del array
+// el segundo es el valor del indice o el index
+// el tercero es el array original
+
+var alumnosAprobados = [];
+var alumnosDesaprobados = [];
+
+/* alumnos.forEach(function(alumno){ // function(alumno, index, array)
+
+  // array[2][0] == 'Ana' //ejecutar algo
+
+  let nombre = alumno[0];
+  let nota = alumno[3];
+
+  if(nota >= 7){
+
+    alumnosAprobados.push(nombre);
+
+  }else{
+
+    alumnosDesaprobados.push(nombre);
+
+  }
+
+}); */
+
+/*   console.log('Alumno:', alumno);
+  console.log('Indice:', index);
+  console.log('Array Original:', array); */
+
+/* console.log('Alumnos aprobados', alumnosAprobados);
+console.log('Alumnos desaprobados', alumnosDesaprobados); */
+
+/* alumnos.forEach(() => {
+
+}) */
 
 
 
+// while
+
+/* let i = 0;
+
+while(i < 10){ // true
+
+  console.log(i);
+  i++;
+
+} */
